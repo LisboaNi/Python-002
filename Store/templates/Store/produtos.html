@@ -3,7 +3,24 @@
 {% block title %}Lista de Produtos{% endblock %}
 
 {% block content %}
+    <div class="empresa-destaque">
+        {% if empresa.imagem_destaque %}
+            <img src="{{ empresa.imagem_destaque.url }}" alt="{{ empresa.nome }}">
+        {% endif %}
+        <div class="empresa-descricao">
+            <h2>{{ empresa.nome }}</h2>
+            <p>{{ empresa.descricao }}</p>
+        </div>
+    </div>
+    
     <h1>Produtos</h1>
+
+    <!-- Formulário de Filtro -->
+    <form method="GET" action="{% url 'listar_produtos' %}">
+        <input type="text" name="nome" placeholder="Nome do produto" value="{{ request.GET.nome }}">
+        <button type="submit">Filtrar</button>
+    </form>
+
     <div class="produtos-grid">
         {% for produto in produtos %}
             <div class="produto-card">

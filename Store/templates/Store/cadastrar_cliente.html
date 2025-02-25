@@ -1,0 +1,11 @@
+{% extends 'Store/base.html' %}
+
+{% block content %}
+<h2>Cadastro de Cliente</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ cliente_form.as_p }}
+    <button type="submit">Cadastrar</button>
+</form>
+{% endblock %}

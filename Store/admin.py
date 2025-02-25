@@ -6,7 +6,7 @@ admin.site.register(Empresa)
 admin.site.register(Produto)
 admin.site.register(Pedido)
 
-# admin.site.register(Cliente)
+admin.site.register(Cliente)
 # admin.site.register(Carrinho)
 # admin.site.register(PedidoProduto)
 # admin.site.register(Pagamento)

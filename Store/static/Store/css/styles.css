@@ -37,6 +37,14 @@ header .logo {
     font-weight: bold;
 }
 
+/* Limitar o tamanho da logo */
+.logo img {
+    max-width: 100px;  /* Largura máxima */
+    max-height: 40px;  /* Altura máxima */
+    width: auto;      /* Manter a proporção */
+    height: auto;     /* Manter a proporção */
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -151,6 +159,125 @@ footer {
 
 .botoes .carrinho:hover {
     background-color: #218838;
+}
+
+/* =================== */
+/* CAMPO PESQUISA */
+/* =================== */
+
+form input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+form button[type="submit"] {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* =================== */
+/* DESTAQUE */
+/* =================== */
+
+.empresa-destaque {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.empresa-destaque img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.empresa-descricao {
+    max-width: 600px;
+}
+
+.empresa-descricao h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.empresa-descricao p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* =================== */
+/* DETALHE DO PRODUTO */
+/* =================== */
+
+.detalhe-produto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detalhe-produto h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.detalhe-produto p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.detalhe-produto .preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+.detalhe-produto img {
+    max-width: 20%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.detalhe-produto .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.detalhe-produto .btn:hover {
+    background-color: #0056b3;
+}
+
+.detalhe-produto .btn-voltar {
+    background-color: #6c757d;
+}
+
+.detalhe-produto .btn-voltar:hover {
+    background-color: #5a6268;
 }
 
 /* =================== */
