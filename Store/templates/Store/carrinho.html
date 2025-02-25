@@ -1,0 +1,21 @@
+<!-- loja/carrinho.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+</head>
+<body>
+    <h1>Carrinho de Compras</h1>
+    <div>
+        {% for item in carrinho %}
+            <p>{{ item.produto.nome }} - Quantidade: {{ item.quantidade }} - R$ {{ item.total }}</p>
+        {% endfor %}
+    </div>
+    <h2>Total: R$ {{ total_carrinho }}</h2>
+    <a href="{% url 'finalizar_pedido' %}">Finalizar pedido</a>
+    <br>
+    <a href="{% url 'listar_produtos' %}">Voltar para os produtos</a>
+</body>
+</html>

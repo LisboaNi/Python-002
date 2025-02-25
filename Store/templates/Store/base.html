@@ -1,0 +1,39 @@
+<!-- loja/templates/loja/base.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Minha Loja{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/Store/css/styles.css' %}">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Minha Loja</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'pedidos_cliente' %}">Meus Pedidos</a></li>
+                <li><a href="{% url 'ver_carrinho' %}">Carrinho</a></li>
+                <li><a href="/contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Dinâmico -->
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="{% static '/Store/js/scripts.js' %}"></script>
+</body>
+</html>

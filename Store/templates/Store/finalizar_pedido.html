@@ -1,0 +1,23 @@
+<!-- loja/finalizar_pedido.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido</title>
+</head>
+<body>
+    <h1>Finalizar Pedido</h1>
+    <form action="{% url 'processar_pagamento' pedido.id %}" method="POST">
+        {% csrf_token %}
+        <h2>Total: R$ {{ pedido.total }}</h2>
+        <label for="metodo_pagamento">Método de pagamento:</label>
+        <select name="metodo_pagamento" id="metodo_pagamento">
+            <option value="pix">PIX</option>
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="boleto">Boleto Bancário</option>
+        </select>
+        <button type="submit">Finalizar</button>
+    </form>
+</body>
+</html>

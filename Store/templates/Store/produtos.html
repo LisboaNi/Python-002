@@ -1,0 +1,22 @@
+{% extends 'Store/base.html' %}
+
+{% block title %}Lista de Produtos{% endblock %}
+
+{% block content %}
+    <h1>Produtos</h1>
+    <div class="produtos-grid">
+        {% for produto in produtos %}
+            <div class="produto-card">
+                <!-- Imagem do produto -->
+                <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}">
+                <h2>{{ produto.nome }}</h2>
+                <p>{{ produto.descricao }}</p>
+                <p class="preco">R$ {{ produto.preco }}</p>
+                <div class="botoes">
+                    <a href="{% url 'detalhe_produto' produto.id %}" class="btn detalhes">Ver detalhes</a>
+                    <a href="{% url 'adicionar_ao_carrinho' produto.id %}" class="btn carrinho">Adicionar ao carrinho</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

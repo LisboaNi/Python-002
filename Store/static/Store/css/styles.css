@@ -1,0 +1,175 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* =================== */
+/* GERAL */
+/* =================== */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 50px; /* Para não sobrepor o rodapé fixo */
+}
+
+main {
+    padding: 20px;
+}
+
+/* =================== */
+/* CABEÇALHO */
+/* =================== */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* =================== */
+/* RODAPÉ */
+/* =================== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* =================== */
+/* GRID DE PRODUTOS */
+/* =================== */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 5px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.produto-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: justify;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.produto-card:hover {
+    transform: scale(1.05);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.produto-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.produto-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.produto-card .preco {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 15px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.botoes .btn {
+    text-decoration: none;
+    padding: 5px 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botoes .detalhes {
+    background-color: #007bff;
+    color: white;
+}
+
+.botoes .detalhes:hover {
+    background-color: #0056b3;
+}
+
+.botoes .carrinho {
+    background-color: #28a745;
+    color: white;
+}
+
+.botoes .carrinho:hover {
+    background-color: #218838;
+}
+
+/* =================== */
+/* RESPONSIVIDADE */
+/* =================== */
+@media (max-width: 768px) {
+    .produtos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .produto-card {
+        padding: 15px;
+    }
+
+    .produto-card h2 {
+        font-size: 16px;
+    }
+
+    .produto-card .preco {
+        font-size: 14px;
+    }
+}

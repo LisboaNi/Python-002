@@ -1,0 +1,18 @@
+<!-- loja/detalhe_produto.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+</head>
+<body>
+    <h1>{{ produto.nome }}</h1>
+    <p>{{ produto.descricao }}</p>
+    <p>Preço: R$ {{ produto.preco }}</p>
+    <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}" width="300">
+    <a href="{% url 'adicionar_ao_carrinho' produto.id %}">Adicionar ao carrinho</a>
+    <br>
+    <a href="{% url 'listar_produtos' %}">Voltar para a lista de produtos</a>
+</body>
+</html>

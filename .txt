@@ -1,0 +1,19 @@
+1. Verificar versão do Django:
+   py -m django --version
+
+2. Criar diretório e iniciar projeto Django:
+   mkdir StoreMaster
+   django-admin startproject mysite StoreMaster
+
+3. Iniciar servidor de desenvolvimento:
+   py manage.py runserver
+
+4. Criar migrações e aplicar no banco de dados:
+   python manage.py makemigrations
+   python manage.py migrate
+
+5. Criar superusuário:
+   python manage.py createsuperuser
+
+6. Instalar Pillow para trabalhar com imagens:
+   pip install Pillow
